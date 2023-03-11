@@ -1,4 +1,4 @@
-document.getElementById("bored-bot").addEventListener("click", getIdea)
+// document.getElementById("bored-bot").addEventListener("click", getIdea)
 
 function getIdea() {
     fetch("https://www.boredapi.com/api/activity")
@@ -13,4 +13,12 @@ function getIdea() {
 
 fetch("https://dog.ceo/api/breeds/image/random")
 .then((respone)=> respone.json())
-.then((data)=>console.log(data))
+.then((data)=>{
+
+    console.log(data)
+    document.getElementById("image-container").innerHTML=
+    `
+    <img src="${data.message}" />
+    `
+})
+
