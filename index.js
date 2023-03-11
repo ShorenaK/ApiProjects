@@ -1,17 +1,27 @@
  document.getElementById("bored-bot").addEventListener("click", getIdea)
 
-function getIdea() {
-    fetch("https://www.boredapi.com/api/activity")
-        .then(res => res.json())
-        .then(data => {
-            console.log(data)
-            document.body.classList.add("fun")
-            document.getElementById("idea").textContent = data.activity
-            document.getElementById("title").textContent = "🦾 HappyBot🦿"
-        })
+// function getIdea() {
+//     fetch("https://www.boredapi.com/api/activity")
+//         .then(res => res.json())
+//         .then(data => {
+//             console.log(data)
+//             document.body.classList.add("fun")
+//             document.getElementById("idea").textContent = data.activity
+//             document.getElementById("title").textContent = "🦾 HappyBot🦿"
+//         })
+// }
+
+function getIdea(){
+   fetch("https://www.boredapi.com/api/activity")
+   .then((response)=> response.json())
+   .then((data) =>{
+       console.log(data)
+       // to add the class from css 
+       document.body.classList.add("fun")
+       document.getElementById("idea").innerHTML = data.activity
+       document.getElementById("title").innerHTML = "🦾 HappyBot🦿"
+   })
 }
-
-
 
 
 // fetch("https://dog.ceo/api/breeds/image/random")
