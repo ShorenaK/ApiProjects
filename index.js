@@ -9,3 +9,8 @@ function getIdea() {
             document.getElementById("title").textContent = "🦾 HappyBot🦿"
         })
 }
+
+
+fetch("https://dog.ceo/api/breeds/image/random")
+.then((respone)=> respone.json())
+.then((data)=>console.log(data))
