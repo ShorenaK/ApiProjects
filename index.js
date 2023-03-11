@@ -1,4 +1,4 @@
-// document.getElementById("bored-bot").addEventListener("click", getIdea)
+ document.getElementById("bored-bot").addEventListener("click", getIdea)
 
 function getIdea() {
     fetch("https://www.boredapi.com/api/activity")
@@ -11,7 +11,7 @@ function getIdea() {
         })
 }
 
-getIdea()
+
 
 
 // fetch("https://dog.ceo/api/breeds/image/random")
