@@ -25,6 +25,6 @@ function getIdea() {
 fetch("https://apis.scrimba.com/bored/api/activity")
 .then((response)=> response.json())
 .then((data)=>{
-   document.getElementById("image-container").innerHTML =
-` <h1> ${data.activity} </h1>`
+   document.getElementById("image-container").textContent =
+data.activity
 })
